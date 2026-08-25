@@ -195,6 +195,11 @@ jobs:
           # Remove the "#" sign from the beginning of the line below to activate:
           #curl https://github.com/loopnlearn/Loop/commit/d206432b024279ef710df462b20bd464cd9682d4.patch | git apply --directory=Loop -v --whitespace=fix
 
+          # Bloom palette + Amiri باء app icon, rebased on the dev branch's Loop commit.
+          # If a dev update breaks this, put '#' at the start of the curl line below,
+          # commit, and re-run the build. That restores stock colours and icon.
+          curl https://github.com/saraoth3/Loop/commit/4b016eedbb45e27cb61e462f509b0e86e141445e.patch | git apply --directory=Loop -v --whitespace=fix
+
           # Submodule LoopKit patches:
           # General template for customizing submodule LoopKit 
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
@@ -206,6 +211,14 @@ jobs:
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
+
+          # Loop and Learn customizations (same template for main and dev).
+          /bin/bash -c "$(curl -fsSL \
+          https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
+          future_carbs_4h \
+          override_sens \
+          now_line \
+          meal_week
 
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
