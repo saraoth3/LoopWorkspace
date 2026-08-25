@@ -199,6 +199,11 @@ jobs:
           # Remove the "#" sign from the beginning of the line below to activate:
           #curl https://github.com/loopnlearn/Loop/commit/d206432b024279ef710df462b20bd464cd9682d4.patch | git apply --directory=Loop -v --whitespace=fix
 
+          # Bloom palette - custom colours for glucose/carbs/insulin/fresh/warning/accent.
+          # If a future Loop release makes this fail, put a '#' at the start of the curl
+          # line below, commit, and re-run the build. That restores stock colours.
+          curl https://github.com/saraoth3/Loop/commit/d68b433ef674bd839daaee9132a53e74e0322e0f.patch | git apply --directory=Loop -v --whitespace=fix
+
           # Submodule LoopKit patches:
           # General template for customizing submodule LoopKit 
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
