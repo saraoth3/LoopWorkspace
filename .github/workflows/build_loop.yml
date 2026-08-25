@@ -216,9 +216,13 @@ jobs:
           /bin/bash -c "$(curl -fsSL \
           https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
           future_carbs_4h \
+          high_carb_limit \
           override_sens \
           now_line \
-          meal_week
+          watch_title \
+          meal_week \
+          profiles \
+          basal_lock
 
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
