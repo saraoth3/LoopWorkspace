@@ -195,10 +195,11 @@ jobs:
           # Remove the "#" sign from the beginning of the line below to activate:
           #curl https://github.com/loopnlearn/Loop/commit/d206432b024279ef710df462b20bd464cd9682d4.patch | git apply --directory=Loop -v --whitespace=fix
 
-          # Bloom palette + Amiri باء app icon, rebased on the dev branch's Loop commit.
+          # Bloom palette (colours only). The app icon is committed directly to
+          # OverrideAssetsLoop.xcassets in this repo - no patch needed for it.
           # If a dev update breaks this, put '#' at the start of the curl line below,
           # commit, and re-run the build. That restores stock colours and icon.
-          curl https://github.com/saraoth3/Loop/commit/4b016eedbb45e27cb61e462f509b0e86e141445e.patch | git apply --directory=Loop -v --whitespace=fix
+          curl https://github.com/saraoth3/Loop/commit/e388b08a7645651182b5fc5c5ebd8176becc8964.patch | git apply --directory=Loop -v --whitespace=fix
 
           # Submodule LoopKit patches:
           # General template for customizing submodule LoopKit 
